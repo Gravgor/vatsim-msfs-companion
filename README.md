@@ -81,3 +81,45 @@ A sophisticated real-time flight tracking application that combines VATSIM fligh
 - Efficient map layer rendering
 - Debounced API calls
 - Lazy loading of weather overlays
+
+
+## 🔧 Configuration
+
+The application can be configured through various environment variables and settings:
+- Map styles and default view
+- Update intervals for data fetching
+- Cache durations
+- Weather overlay options
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- VATSIM for providing flight data
+- Mapbox for mapping technology
+- CheckWX for weather data
+- Open source community for various tools and libraries
+
+## 🔮 Future Plans
+
+- [ ] Add historical flight path playback
+- [ ] Implement additional weather data sources
+- [ ] Add flight plan filing capability
+- [ ] Enhance 3D visualization
+- [ ] Add voice communication features
+
+## 📞 Contact
+
+Marceli Borowczak - [@marceliborowczak](https://twitter.com/marceliborowczak) - marceliborowczak@gmail.com
+
+Project Link: [https://github.com/Gravgor/vatsim-msfs-companion](https://github.com/Gravgor/vatsim-msfs-companion)
+
+---
+
+Made with ❤️ by Marceli Borowczak
