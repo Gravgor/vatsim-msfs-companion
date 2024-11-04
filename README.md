@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Real-Time Flight Tracker with Weather Overlay
 
-## Getting Started
+![Project Banner/Screenshot](image.png)
 
-First, run the development server:
+A sophisticated real-time flight tracking application that combines VATSIM flight data with weather information, providing a comprehensive aviation monitoring experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌟 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Flight Tracking
+- Real-time aircraft position tracking using VATSIM data
+- Flight path visualization with curved great circle routes
+- Aircraft information display (callsign, altitude, speed, heading)
+- Ground traffic visualization
+- Flight plan routes with departure/arrival information
+- Aircraft following mode
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Weather System
+- METAR data display for airports
+  - Temperature, wind, visibility, and pressure information
+  - Flight category indicators (VFR, MVFR, IFR, LIFR)
+  - Raw METAR text and decoded information
+- Weather visualization layers:
+  - METAR stations with conditions
+  - Weather radar overlay
+  - Wind barbs showing direction and speed
+  - Weather fronts visualization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Map Features
+- Multiple map styles (Dark, Light, Satellite, Terrain)
+- 3D building visualization
+- Terrain elevation data
+- Customizable map labels
+- Day/Night mode
+- Airport information overlay
 
-## Learn More
+## 🛠️ Technologies
 
-To learn more about Next.js, take a look at the following resources:
+### Frontend
+- **React 19** with TypeScript
+- **Next.js 15** for server-side rendering and API routes
+- **Tailwind CSS** for styling
+- **Mapbox GL JS** for map rendering
+- **Zustand** for state management
+- **React Map GL** for map components
+- **Lucide Icons** for UI icons
+- **ShadcnUI** for UI components
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Backend & Data
+- **Next.js API Routes** for backend functionality
+- **Redis** for caching weather and flight data
+- **VATSIM API** for real-time flight data
+- **CheckWX/VATSIM Weather API** for METAR information
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Development Tools
+- TypeScript for type safety
+- ESLint for code linting
+- Prettier for code formatting
+- Husky for git hooks
+- Jest for testing
 
-## Deploy on Vercel
+## 🏗️ Architecture
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Data Flow
+1. Real-time flight data fetched from VATSIM
+2. Weather data cached in Redis
+3. Client-side state managed with Zustand
+4. Server-side caching for API responses
+5. WebSocket updates for real-time position changes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Key Components
+- `MapView`: Main map component with layers
+- `WeatherOverlay`: Weather visualization system
+- `PlaneMarker`: Aircraft visualization
+- `FlightInfo`: Flight information panel
+- `WeatherControls`: Weather layer controls
+
+## 🚀 Performance Optimizations
+
+- Redis caching for weather data
+- Memoized React components
+- Efficient map layer rendering
+- Debounced API calls
+- Lazy loading of weather overlays
