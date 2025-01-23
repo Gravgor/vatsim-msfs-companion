@@ -55,7 +55,7 @@ export async function getAirportMetar(icao: string): Promise<AirportMetar | null
     // Cache the METAR
     await redis.setEx(
       cacheKey,
-      300, // 5 minutes
+      300, // 2minutes
       JSON.stringify(metarData)
     )
 
