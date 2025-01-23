@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "env": {
+    "NEXT_PUBLIC_MAPBOX_TOKEN": "@mapbox_token",
+    "VATSIM_API_KEY": "@vatsim_api_key",
+    "REDIS_URL": "@redis_url"
+  }
+} 
