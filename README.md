@@ -65,7 +65,6 @@ A sophisticated real-time flight tracking application that combines VATSIM fligh
 2. Weather data cached in Redis
 3. Client-side state managed with Zustand
 4. Server-side caching for API responses
-5. WebSocket updates for real-time position changes
 
 ### Key Components
 - `MapView`: Main map component with layers
